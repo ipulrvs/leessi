@@ -1,0 +1,32 @@
+{
+  "name": "note",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "note": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "todos": {
+      "type": "hasMany",
+      "model": "todo",
+      "foreignKey": ""
+    },
+    "todoUser": {
+      "type": "belongsTo",
+      "model": "todoUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

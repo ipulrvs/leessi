@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "postgre": {
+    "host": "10.0.3.134",
+    "port": 5432,
+    "database": "loopback_todo",
+    "password": "12qwaszx",
+    "name": "postgre",
+    "user": "nebula",
+    "connector": "postgresql"
+  }
+}

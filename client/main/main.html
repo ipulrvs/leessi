@@ -1,0 +1,33 @@
+<div class="ui page centered grid">
+	<div class="column" style="margin-top: 100px; !important">
+		<div class="ui blue segment">
+			<h1>
+				<i class="edit icon"></i>
+				Todos App
+			</h1>
+			<div class="ui divider"></div>
+			<div class="ui form">
+				<div class="one field">
+					<div class="field">
+						<label>Note Title</label>
+						<input type="text" ng-model="note.note" />
+					</div>
+					<div class="field">
+						<label>Note Desc</label>
+						<input type="text" ng-model="note.desc">
+					</div>
+					<div class="field">
+						<button class="ui blue button" ng-click="create()">Create Note</button>
+						<button class="ui green button" ng-click="clear()">Clear</button>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="ui message" ng-repeat="note in notes">
+				<i class="close icon" ng-click="delete(note.id)"></i>
+				<div class="header" ng-click="view(note.id)">{{note.note}} (id: {{note.id}})</div>
+				<p>{{note.desc}}</p>
+			</div>
+		</div>
+	</div>
+</div>
